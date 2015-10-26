@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script src="js/jquery-2.1.3.min.js"></script>
+  <script src="js/jquery.mobile-1.4.5.min.js"></script>
+  <script type="text/javascript" src="js/jquery.oLoader.min.js"></script>
+  
+  <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+  <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" href="css/themes/psjc.min.css" />
+  <link rel="stylesheet" href="css/icon-pack-custom.css"/>
+  
+  <link rel="stylesheet" href="css/styles.css" />
+  
+  <title>Parroquia San Juan de la Cruz</title>
+  
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/assets/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/assets/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="img/assets/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="img/assets/favicon.png">
+  
+  <script type="text/javascript">
+var version = '1.0.0'
+
+/* enviando mails */
+  function sendMail(){
+	  window.location.href = "mailto:info@parroquiasjc.org";
+  }
+  
+  /* oLoader */
+  $(function(){
+	  $('body').oLoader({
+        wholeWindow: true,
+        backgroundColor:'#fff',
+        fadeLevel: 0.8,
+        fadeInTime: 0,
+        fadeOutTime: 500,
+        image: 'img/ownageLoader/loader4.gif'
+      });
+      
+      $(window).load(function(){
+        $('body').oLoader('hide');
+      });
+  });
+</script>
+</head>
+
+<body>
+  <!-- **************************** Page 1 *************************** -->
+  <!-- Home -->
+  <div data-role="page" id="page">
+  	<div data-role="header">
+      <h1>Petacones</h1>
+	</div>
+    
+	<div data-role="main" class="ui-content">
+      <div class="ui-grid-solo ui-responsive">
+        <div class="ui-block-a"><a href="#selectos" class="ui-btn ui-input-btn ui-icon-comment ui-btn-icon-top ui-corner-all ui-shadow" data-rel="popup" data-position-to="window">Super Selectos</a></div>
+        
+        <div class="ui-block-a"><a href="#wallmart" class="ui-btn ui-input-btn ui-icon-clock ui-btn-icon-top ui-corner-all ui-shadow" data-rel="popup" data-position-to="window">Wal*Mart</a></div>
+        
+        <!-- Popups -->
+        <div data-role="popup" id="selectos" data-overlay-theme="b" data-theme="a" data-tolerance="15,15" class="ui-content">
+          <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Cerrar</a>
+          <iframe src="https://docs.google.com/forms/d/1JjcDcuOJ_qtDS4BB4SQoS-IXK7s_MaC2l-h7pwVkX-Y/viewform" seamless="" height="300" width="100%"></iframe>
+        </div>
+        
+        <div data-role="popup" id="wallmart" data-overlay-theme="b" data-theme="a" data-tolerance="15,15" class="ui-content">
+          <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Cerrar</a>
+          <iframe src="https://docs.google.com/forms/d/1VZ6Er4U36K4Fz1ZQURoAW7aKQVgpwbcjB8f2k-nQo2E/viewform" seamless="" height="300" width="100%"></iframe>
+        </div>
+        <!-- /Popups -->
+      </div>
+    </div>
+    
+    <div data-role="footer">
+      <h4><?php echo date('Y') ?> &copy; Sucesores Luis Torres &amp; Cia.</h4>
+    </div>
+  </div>
+  <!-- /Home -->
+</body>
+</html>
+<!-- Adler Systems Framework - www.adlersystems.com -->
