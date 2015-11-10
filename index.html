@@ -60,41 +60,19 @@ var version = '1.0.0'
     
 	<div data-role="main" class="ui-content">
       <div class="ui-grid-solo ui-responsive">
-        <div class="ui-block-a"><a href="#selectos" class="ui-btn ui-input-btn ui-icon-comment ui-btn-icon-top ui-corner-all ui-shadow" data-rel="popup" data-position-to="window">Super Selectos</a></div>
+        <div id="updates" style="text-align:center;"></div>
+		<script>
+		  $.get("http://parroquiasjc.org/app/apk/version.php", function(data){
+			  if(data != version){
+				  $( "#updates" ).html( "<a href='http://www.petacones.net/app/download.html' class='ui-btn ui-mini ui-corner-all ui-btn-inline ui-icon-recycle ui-btn-icon-left ui-btn-f'>Actualizaci&oacute;n disponible</a>")
+			  }
+		  });
+        </script>
         
-        <div class="ui-block-a"><a href="#wallmart" class="ui-btn ui-input-btn ui-icon-clock ui-btn-icon-top ui-corner-all ui-shadow" data-rel="popup" data-position-to="window">Wal*Mart</a></div>
         
-        <!-- Popups -->
-        <div data-role="popup" id="selectos" data-overlay-theme="b" data-theme="a" data-tolerance="15,15" class="ui-content">
-          <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Cerrar</a>
-          <div id="selectos1">
-		   <script>
-            $( "#selectos1" ).html( "<iframe src='https://docs.google.com/forms/d/1JjcDcuOJ_qtDS4BB4SQoS-IXK7s_MaC2l-h7pwVkX-Y/viewform?embedded=true' seamless='' width='100%' height='300' frameborder='0' marginheight='0' marginwidth='0'>Loading...</iframe>", function( response, status, xhr ) {
-            if ( status == "error" ) {
-            var msg = "Sorry but there was an error: ";
-            $( "#error2" ).html( msg + xhr.status + " " + xhr.statusText );
-            }
-            });
-           </script>
-           <div id="error2"></div>
-          </div>
-        </div>
+        <div class="ui-block-a"><a href="#page2" class="ui-btn ui-input-btn ui-icon-comment ui-btn-icon-top ui-corner-all ui-shadow" data-ajax="false">Super Selectos</a></div>
         
-        <div data-role="popup" id="wallmart" data-overlay-theme="b" data-theme="a" data-tolerance="15,15" class="ui-content">
-          <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Cerrar</a>
-          <div id="wallmart2">
-		   <script>
-            $( "#wallmart2" ).html( "<iframe src='https://docs.google.com/forms/d/1VZ6Er4U36K4Fz1ZQURoAW7aKQVgpwbcjB8f2k-nQo2E/viewform' seamless='' height='300' width='100%'></iframe>", function( response, status, xhr ) {
-            if ( status == "error" ) {
-            var msg = "Sorry but there was an error: ";
-            $( "#error3" ).html( msg + xhr.status + " " + xhr.statusText );
-            }
-            });
-           </script>
-           <div id="error3"></div>
-          </div>
-        </div>
-        <!-- /Popups -->
+        <div class="ui-block-a"><a href="#page3" class="ui-btn ui-input-btn ui-icon-clock ui-btn-icon-top ui-corner-all ui-shadow" data-ajax="false">Wal*Mart</a></div>
       </div>
     </div>
     
@@ -103,6 +81,49 @@ var version = '1.0.0'
     </div>
   </div>
   <!-- /Home -->
+  
+  <!-- **************************** Page 2 *************************** -->
+  <!-- Selectos -->
+  <div data-role="page" id="page2">
+    <div data-role="header">
+      <a href="index2.html" data-icon="arrow-l" rel="external">Inicio</a>
+      <h1>Petacones</h1>
+    </div>
+      
+    <div data-role="main" class="ui-content" id="selectos">
+      <!-- Form -->
+      <iframe src='https://docs.google.com/forms/d/1JjcDcuOJ_qtDS4BB4SQoS-IXK7s_MaC2l-h7pwVkX-Y/viewform?embedded=true' seamless='' width='100%' height='300' frameborder='0' marginheight='0' marginwidth='0'>Loading...</iframe>
+      <!-- /Form -->
+      <div id="error1"></div>
+    </div>
+    
+    <div data-role="footer">
+      <h4><?php echo date('Y') ?> &copy; Sucesores Luis Torres &amp; Cia.</h4>
+    </div>
+  </div>
+  <!-- /Selectos -->
+  
+  
+  <!-- **************************** Page 3 **************************** -->
+  <!-- Wal*Mart -->
+  <div data-role="page" id="page3">
+    <div data-role="header">
+      <a href="index2.html" data-icon="arrow-l" rel="external">Inicio</a>
+      <h1>Petacones</h1>
+    </div>
+      
+    <div data-role="main" class="ui-content" id="wallmart">
+      <!-- Form -->
+      <iframe src="https://docs.google.com/forms/d/1VZ6Er4U36K4Fz1ZQURoAW7aKQVgpwbcjB8f2k-nQo2E/viewform" seamless="" height="300" width="100%"></iframe>
+     <div id="error2"></div>
+      <!-- /Form -->
+    </div>
+    
+    <div data-role="footer">
+      <h4><?php echo date('Y') ?> &copy; Sucesores Luis Torres &amp; Cia.</h4>
+    </div>
+  </div>
+  <!-- /Wal*Mart -->
 </body>
 </html>
 <!-- Adler Systems Framework - www.adlersystems.com -->
