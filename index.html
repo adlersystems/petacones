@@ -69,7 +69,7 @@ var version = '1.0.0'
           <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Cerrar</a>
           <div id="selectos1">
 		   <script>
-            $( "#selectos1" ).html( "<iframe src='https://docs.google.com/forms/d/1JjcDcuOJ_qtDS4BB4SQoS-IXK7s_MaC2l-h7pwVkX-Y/viewform' seamless='' height='300' width='100%'></iframe>", function( response, status, xhr ) {
+            $( "#selectos1" ).html( "<iframe src='https://docs.google.com/forms/d/1JjcDcuOJ_qtDS4BB4SQoS-IXK7s_MaC2l-h7pwVkX-Y/viewform?embedded=true' seamless='' width='100%' height='300' frameborder='0' marginheight='0' marginwidth='0'>Loading...</iframe>", function( response, status, xhr ) {
             if ( status == "error" ) {
             var msg = "Sorry but there was an error: ";
             $( "#error2" ).html( msg + xhr.status + " " + xhr.statusText );
